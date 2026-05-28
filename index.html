@@ -3,39 +3,482 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="World Cup Collection - NFT Premium | Pré-venda exclusiva, mint de NFTs, ranking de colecionadores e muito mais.">
+  <meta name="keywords" content="NFT, World Cup, Coleção, Blockchain, OpenSea">
+  <meta property="og:title" content="World Cup Collection - NFT Premium">
+  <meta property="og:description" content="Explore a coleção premium de NFTs World Cup Collection com design futurista.">
+  <meta property="og:type" content="website">
   <title>World Cup Collection - NFT Premium</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>World Cup Collection</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#pre-venda">Pré-Venda</a>
-      <a href="#mint">Mint</a>
-      <a href="#ranking">Ranking</a>
-      <a href="#simulador">Simulador</a>
-      <a href="#perfil">Perfil</a>
-      <a href="#faq">FAQ</a>
-      <a href="#roadmap">Roadmap</a>
-    </nav>
+  <!-- Navegação -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <i class="fas fa-trophy"></i>
+        <span>World Cup NFT</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#pre-venda" class="nav-link">Pré-Venda</a>
+        <a href="#mint" class="nav-link">Mint</a>
+        <a href="#ranking" class="nav-link">Ranking</a>
+        <a href="#simulador" class="nav-link">Simulador</a>
+        <a href="#perfil" class="nav-link">Perfil</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#roadmap" class="nav-link">Roadmap</a>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
 
-  <section id="pre-venda">
-    <h2>Pré-Venda Exclusiva</h2>
-    <p>Cadastre-se para garantir acesso antecipado.</p>
-    <a href="#" class="btn">Entrar na Pré-Venda</a>
-    <div class="countdown" id="countdown"></div>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">World Cup Collection</h1>
+      <p class="hero-subtitle">A maior coleção de NFTs de futebol com design premium e funcionalidades exclusivas</p>
+      <div class="hero-buttons">
+        <a href="#pre-venda" class="btn btn-primary">Começar Agora</a>
+        <a href="#nfts" class="btn btn-secondary">Ver Coleção</a>
+      </div>
+    </div>
+    <div class="hero-background">
+      <div class="glow-ball"></div>
+      <div class="glow-ball-2"></div>
+    </div>
   </section>
 
-  <section id="nfts">
-    <h2 style="color:#ffcc00;">NFTs da Coleção</h2>
-    <div id="nft-gallery" style="display:flex; flex-wrap:wrap; justify-content:center;"></div>
+  <!-- Pré-Venda Section -->
+  <section id="pre-venda" class="presale">
+    <div class="section-container">
+      <h2 class="section-title">Pré-Venda Exclusiva</h2>
+      <p class="section-subtitle">Cadastre-se para garantir acesso antecipado e benefícios exclusivos</p>
+      
+      <div class="presale-content">
+        <div class="countdown-container">
+          <div class="countdown" id="countdown">
+            <div class="countdown-item">
+              <span class="countdown-value" id="days">0</span>
+              <span class="countdown-label">Dias</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="hours">0</span>
+              <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="minutes">0</span>
+              <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="seconds">0</span>
+              <span class="countdown-label">Segundos</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="presale-form">
+          <input type="email" placeholder="Seu email" required>
+          <button type="submit" class="btn btn-primary">Entrar na Pré-Venda</button>
+        </form>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    © 2026 - World Cup Collection NFT Premium
+  <!-- NFTs Section -->
+  <section id="nfts" class="nfts">
+    <div class="section-container">
+      <h2 class="section-title">NFTs da Coleção</h2>
+      <p class="section-subtitle">Confira as melhores peças da coleção World Cup Collection</p>
+      
+      <div id="nft-gallery" class="nft-gallery">
+        <!-- Carregado dinamicamente por script.js -->
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Carregando NFTs...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mint Section -->
+  <section id="mint" class="mint">
+    <div class="section-container">
+      <h2 class="section-title">Mint de NFTs</h2>
+      <p class="section-subtitle">Abra as caixas e revele suas peças exclusivas com animações por raridade</p>
+      
+      <div class="mint-content">
+        <div class="mint-card">
+          <div class="mint-icon">
+            <i class="fas fa-box"></i>
+          </div>
+          <h3>Caixa Bronze</h3>
+          <p>Peças comuns com possibilidade de upgrade</p>
+          <button class="btn btn-secondary">Abrir Caixa</button>
+        </div>
+        <div class="mint-card">
+          <div class="mint-icon rare">
+            <i class="fas fa-box"></i>
+          </div>
+          <h3>Caixa Prata</h3>
+          <p>Peças raras com atributos especiais</p>
+          <button class="btn btn-secondary">Abrir Caixa</button>
+        </div>
+        <div class="mint-card">
+          <div class="mint-icon epic">
+            <i class="fas fa-box"></i>
+          </div>
+          <h3>Caixa Ouro</h3>
+          <p>Peças épicas e legendárias garantidas</p>
+          <button class="btn btn-secondary">Abrir Caixa</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ranking Section -->
+  <section id="ranking" class="ranking">
+    <div class="section-container">
+      <h2 class="section-title">Top Colecionadores</h2>
+      <p class="section-subtitle">Veja os maiores colecionadores e progresso de álbuns</p>
+      
+      <div class="ranking-content">
+        <div class="ranking-table-container">
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th>Posição</th>
+                <th>Colecionador</th>
+                <th>NFTs</th>
+                <th>Álbum (%)</th>
+                <th>Pontos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="rank-1">
+                <td><span class="medal">🥇</span></td>
+                <td>ColecionadorPro</td>
+                <td>245</td>
+                <td><div class="progress-bar"><div class="progress" style="width: 95%"></div></div></td>
+                <td>4,850</td>
+              </tr>
+              <tr class="rank-2">
+                <td><span class="medal">🥈</span></td>
+                <td>NFTHunter</td>
+                <td>198</td>
+                <td><div class="progress-bar"><div class="progress" style="width: 87%"></div></div></td>
+                <td>3,960</td>
+              </tr>
+              <tr class="rank-3">
+                <td><span class="medal">🥉</span></td>
+                <td>BlockChainKing</td>
+                <td>167</td>
+                <td><div class="progress-bar"><div class="progress" style="width: 78%"></div></div></td>
+                <td>3,340</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>DigitalArt</td>
+                <td>145</td>
+                <td><div class="progress-bar"><div class="progress" style="width: 65%"></div></div></td>
+                <td>2,900</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>CryptoCollector</td>
+                <td>132</td>
+                <td><div class="progress-bar"><div class="progress" style="width: 58%"></div></div></td>
+                <td>2,640</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Simulador Section -->
+  <section id="simulador" class="simulator">
+    <div class="section-container">
+      <h2 class="section-title">Simulador de Compras</h2>
+      <p class="section-subtitle">Simule suas compras em tempo real</p>
+      
+      <div class="simulator-content">
+        <div class="simulator-panel">
+          <h3>Configurar Simulação</h3>
+          <div class="form-group">
+            <label>Quantidade de NFTs:</label>
+            <input type="number" id="nft-count" value="1" min="1" max="100">
+          </div>
+          <div class="form-group">
+            <label>Tipo de NFT:</label>
+            <select id="nft-type">
+              <option value="common">Comum - 50 USD</option>
+              <option value="rare">Raro - 150 USD</option>
+              <option value="epic">Épico - 500 USD</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Total: <span id="total-price">50 USD</span></label>
+          </div>
+          <button class="btn btn-primary" onclick="updateTotal()">Atualizar Total</button>
+        </div>
+
+        <div class="simulator-results">
+          <div class="result-item">
+            <h4>Custo Base</h4>
+            <p id="base-cost">50 USD</p>
+          </div>
+          <div class="result-item">
+            <h4>Taxa de Plataforma (5%)</h4>
+            <p id="platform-fee">2.50 USD</p>
+          </div>
+          <div class="result-item">
+            <h4>Gás (Blockchain)</h4>
+            <p id="gas-fee">10 USD</p>
+          </div>
+          <div class="result-item total">
+            <h4>Total Final</h4>
+            <p id="final-total">62.50 USD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perfil Section -->
+  <section id="perfil" class="profile">
+    <div class="section-container">
+      <h2 class="section-title">Meu Perfil</h2>
+      <p class="section-subtitle">Conecte-se via wallet e gerencie sua coleção</p>
+      
+      <div class="profile-content">
+        <div class="profile-card">
+          <div class="profile-avatar">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <h3>Conectar Carteira</h3>
+          <p>Faça login com sua carteira Web3 para acessar seu perfil exclusivo</p>
+          <div class="wallet-options">
+            <button class="wallet-btn">
+              <i class="fab fa-ethereum"></i> MetaMask
+            </button>
+            <button class="wallet-btn">
+              <i class="fas fa-wallet"></i> WalletConnect
+            </button>
+            <button class="wallet-btn">
+              <i class="fas fa-coins"></i> Coinbase
+            </button>
+          </div>
+        </div>
+
+        <div class="profile-stats">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fas fa-image"></i>
+            </div>
+            <h4>Meus NFTs</h4>
+            <p class="stat-number">0</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h4>Badges</h4>
+            <p class="stat-number">0</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h4>Notificações</h4>
+            <p class="stat-number">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <div class="section-container">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      <p class="section-subtitle">Tire suas dúvidas sobre a plataforma</p>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>O que é um NFT?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Um NFT (Non-Fungible Token) é um ativo digital único e verificado na blockchain. Cada NFT tem características únicas que o diferenciam de outros.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Como faço para comprar um NFT?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Primeiro, você precisa conectar sua carteira Web3 (MetaMask, WalletConnect, etc). Depois, escolha o NFT desejado e confirme a transação.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Qual é a taxa de transação?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>As taxas incluem: 5% de taxa de plataforma + custo de gás da blockchain (varia conforme congestionamento da rede).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Como participar do ranking?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Quanto mais NFTs você coletar e completar de seu álbum, mais pontos você acumula e sobe no ranking. Badges especiais também são conquistadas!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Posso revender meus NFTs?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Sim! Você pode revender seus NFTs na nossa plataforma ou no OpenSea. Os preços são definidos pelo mercado.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Quando é o lançamento oficial?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Confira o cronômetro na seção "Pré-Venda" para saber quando o lançamento oficial acontecerá. Os pré-vendedores terão acesso 24 horas antes!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="roadmap">
+    <div class="section-container">
+      <h2 class="section-title">Roadmap</h2>
+      <p class="section-subtitle">Conheça os planos futuros da World Cup Collection</p>
+      
+      <div class="roadmap-timeline">
+        <div class="roadmap-item completed">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <h3>Q2 2026 - Conceito & Design</h3>
+            <p>Desenvolvimento do conceito visual, design dos NFTs e estrutura da plataforma</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item active">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <h3>Q3 2026 - Pré-Venda & Mint</h3>
+            <p>Lançamento da pré-venda, abertura de caixas e início da distribuição de NFTs</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <h3>Q4 2026 - Marketplace & Trading</h3>
+            <p>Marketplace integrado para compra, venda e troca de NFTs entre colecionadores</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <h3>Q1 2027 - Metaverso & Jogo</h3>
+            <p>Integração com metaverso e desenvolvimento de mini-jogo interativo</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <h3>Q2 2027 - DAO & Governance</h3>
+            <p>Lançamento de token de governança e transformação em DAO descentralizada</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>World Cup Collection</h4>
+        <p>A maior plataforma de NFTs de futebol com tecnologia blockchain premium</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Links Úteis</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#pre-venda">Pré-Venda</a></li>
+          <li><a href="#nfts">Coleção</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Comunidade</h4>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://discord.com" target="_blank" title="Discord">
+            <i class="fab fa-discord"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" title="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Plataformas</h4>
+        <ul>
+          <li><a href="https://opensea.io" target="_blank">OpenSea</a></li>
+          <li><a href="https://ethereum.org" target="_blank">Ethereum</a></li>
+          <li><a href="https://metamask.io" target="_blank">MetaMask</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 World Cup Collection NFT Premium. Todos os direitos reservados.</p>
+    </div>
   </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top" class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>

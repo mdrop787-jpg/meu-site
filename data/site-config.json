@@ -1,0 +1,6 @@
+{
+  "saleActive": true,
+  "priceWei": "0",
+  "maxPerWallet": 5,
+  "mintFunction": "mint"
+}

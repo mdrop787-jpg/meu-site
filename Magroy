@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Magroy Genesis</title>
+  <style>
+    body {
+      background-color: #000000;
+      color: #FFFFFF;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #111111;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #FFD700;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #00FF7F;
+    }
+    section {
+      padding: 40px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+    h2 {
+      color: #FFD700;
+    }
+    button {
+      background-color: #FFD700;
+      border: none;
+      padding: 10px 20px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00FF7F;
+      color: #000;
+    }
+    footer {
+      background-color: #111111;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    #timer {
+      font-size: 24px;
+      color: #00FF7F;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Magroy Genesis</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#pre-venda">Pré-Venda</a>
+      <a href="#mint">Mint</a>
+      <a href="#ranking">Ranking</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#troca">Troca Reservada</a>
+      <a href="#perfil">Perfil</a>
+      <a href="#faq">FAQ</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#dashboard">Dashboard</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>Apresentação da coleção Magroy Genesis.</p>
+  </section>
+
+  <section id="pre-venda">
+    <h2>Pré-Venda</h2>
+    <p>Cadastre seu e-mail para ser notificado.</p>
+    <button>Entrar na Pré-Venda</button>
+    <div id="timer"></div>
+  </section>
+
+  <section id="mint">
+    <h2>Mint</h2>
+    <p>Abertura das Box com animação por raridade.</p>
+  </section>
+
+  <section id="ranking">
+    <h2>Ranking</h2>
+    <p>Top colecionadores + progresso de álbuns.</p>
+  </section>
+
+  <section id="simulador">
+    <h2>Simulador</h2>
+    <p>Compras em tempo real (real ou simulado).</p>
+  </section>
+
+  <section id="troca">
+    <h2>Troca Reservada</h2>
+    <p>Função de troca entre carteiras.</p>
+  </section>
+
+  <section id="perfil">
+    <h2>Perfil do Usuário</h2>
+    <p>Autenticação via carteira, dashboard pessoal, badges e notificações.</p>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <p>Perguntas frequentes sobre o projeto.</p>
+  </section>
+
+  <section id="roadmap">
+    <h2>Roadmap</h2>
+    <p>Linha do tempo visual do projeto.</p>
+  </section>
+
+  <section id="dashboard">
+    <h2>Dashboard</h2>
+    <p>Estatísticas em tempo real: NFTs mintadas, raridades reveladas, carteiras ativas.</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Magroy Genesis | 
+      <a href="https://www.magroy.com.br" style="color:#FFD700;">Loja Oficial</a> | 
+      <a href="https://opensea.io" style="color:#00FF7F;">OpenSea</a>
+    </p>
+    <p>Siga-nos: Instagram | Twitter/X | Discord | YouTube</p>
+  </footer>
+
+  <script>
+    // Cronômetro regressivo para pré-venda
+    function startCountdown() {
+      const targetDate = new Date("June 1, 2026 00:00:00").getTime();
+      const timerElement = document.getElementById("timer");
+
+      setInterval(function() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          timerElement.innerHTML = "Pré-venda iniciada!";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        timerElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      }, 1000);
+    }
+    startCountdown();
+  </script>
+</body>
+</html>
+
